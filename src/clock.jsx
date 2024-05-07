@@ -9,7 +9,7 @@ export const useDate = () => {
         const timer = setInterval(() => { // Creates an interval which will update the current data every minute
         // This will trigger a rerender every component that uses the useDate hook.
         setDate(new Date());
-      }, 1000);
+      }, 500);
       return () => {
         clearInterval(timer); // Return a function to clear the timer so that it will stop being called on unmount
       }
@@ -17,15 +17,22 @@ export const useDate = () => {
   
     const day = today.toLocaleDateString(locale, { weekday: 'long' });
     const date = `${day}, ${today.getDate()} ${today.toLocaleDateString(locale, { month: 'long' })}\n\n`;
-  
-    const hour = today.getHours();
-    const wish = `Good ${(hour < 12 && 'Morning') || (hour < 17 && 'Afternoon') || 'Evening'}, `;
-  
+
     const time = today.toLocaleTimeString(locale, { hour: 'numeric', hour12: false, minute: 'numeric', second: 'numeric' });
   
+    const hour = time.substring(0,2);
+    const minute = time.substring(3,5);
+    const second = time.substring(6);
+    const wish = `Good ${(hour < 12 && 'Morning') || (hour < 17 && 'Afternoon') || 'Evening'}, `;
+  
+    
+  
     return {
-      date,
       time,
+      date,
+      hour,
+      minute,
+      second,
       wish,
     };
   };

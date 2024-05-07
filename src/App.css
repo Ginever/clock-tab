@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+@font-face {
+  font-family: "digital mono";
+  src: local("digital mono"),
+    url("./fonts/digital-7-mono.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "digital";
+  src: local("digital"),
+    url("./fonts/digital-7.ttf") format("truetype");
+  font-weight: normal;
+}
 
 body{
   margin: 0%;
@@ -13,17 +25,28 @@ body{
   background-color: black;
   height: 100vh
 }
-.time{
-  font-family: "Jersey 10", sans-serif;
+.time-mono{
+  font-family: "digital mono", sans-serif;
   color: #149414;
   font-weight: 400;
   font-style: normal;
+  width: min-content;
   margin: 0;
-  font-size: 30vw;
+  font-size: 25vw;
+}
+.time{
+  font-family: "digital", sans-serif;
+  color: #149414;
+  font-weight: 400;
+  font-style: normal;
+  width: min-content;
+  margin: 0;
+  font-size: 25vw;
 }
 .date{
-  font-family: "Jersey 10", sans-serif;
+  font-family: "digital", sans-serif;
   color: #149414;
+  white-space: nowrap;
   font-weight: 400;
   font-style: normal;
   margin: 0;
