@@ -16,7 +16,7 @@ function App() {
           <tr>
             <table>
               <tbody>
-                <td className='time-mono'>{time.hour}</td>
+                <td className='time'>{time.hour}</td>
                 <td className='time'>:</td>
                 <td className='time-mono'>{time.minute}</td>
                 <td className='time'>:</td>
