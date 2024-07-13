@@ -25,23 +25,21 @@ body{
   background-color: black;
   height: 100vh
 }
-.time-mono{
-  font-family: "digital mono", sans-serif;
+.time-mono, .time {
   color: #149414;
   font-weight: 400;
   font-style: normal;
   width: min-content;
   margin: 0;
+  padding: 0;
   font-size: 25vw;
+}
+.time-mono{
+  font-family: "digital mono", sans-serif;
 }
 .time{
   font-family: "digital", sans-serif;
-  color: #149414;
-  font-weight: 400;
-  font-style: normal;
-  width: min-content;
-  margin: 0;
-  font-size: 25vw;
+
 }
 .date{
   font-family: "digital", sans-serif;
@@ -52,5 +50,15 @@ body{
   margin: 0;
   font-size: 8vw;
   text-align: center;
-
 }
+line, circle, ellipse{
+  stroke-width: 5;
+}
+circle, ellipse{
+  stroke: red;
+}
+
+
+/* circle {
+  stroke-width: 40;
+} */
