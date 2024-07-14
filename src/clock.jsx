@@ -5,7 +5,7 @@ export const useDate = () => {
     const [today, setDate] = React.useState(new Date()); // Save the current date to be able to trigger an update
   
     React.useEffect(() => {
-        const timer = setInterval(() => { // Creates an interval which will update the current data every minute
+        const timer = setInterval(() => { // Creates an interval which will update the current data every 500ms
         // This will trigger a rerender every component that uses the useDate hook.
         setDate(new Date());
       }, 500);
